@@ -66,23 +66,23 @@ public class SampleRecommender {
 					userId, numberOfRecommendations,idrescorer);
 			//}
 				
-			StringBuffer sbAux = new StringBuffer();
+			//StringBuffer sbAux = new StringBuffer();
                         StringBuffer sbAuxRecom = new StringBuffer();
                         StringBuffer sbAuxAlgor = new StringBuffer();
 			
-			sbAux.append("\nAlgorithm:"+rb+">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+			//sbAux.append("\nAlgorithm:"+rb+">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
                         sbAuxAlgor.append("\nAlgorithm:"+rb+">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 			int position = 1;
                         
                         rec.setAlgorithm(sbAuxAlgor.toString());
                         
 			for (RecommendedItem recommendation : recommendedItems) {				
-				sbAux.append(position + ": " + recommendation.getItemID()
-						+ " - "
-						+ dataset.getItemInformationByID(recommendation.getItemID()).getName()
-						+ " - " + recommendation.getValue()
-						+ " - " + dataset.getItemInformationByID(recommendation.getItemID()).getCategories()
-						+ " - " + dataset.getItemInformationByID(recommendation.getItemID()).getItemDomain()+"\n");
+				//sbAux.append(position + ": " + recommendation.getItemID()
+				//		+ " - "
+				//		+ dataset.getItemInformationByID(recommendation.getItemID()).getName()
+				//		+ " - " + recommendation.getValue()
+				//		+ " - " + dataset.getItemInformationByID(recommendation.getItemID()).getCategories()
+				//		+ " - " + dataset.getItemInformationByID(recommendation.getItemID()).getItemDomain()+"\n");
 				
                                 sbAuxRecom.append(position + ": " + recommendation.getItemID()
 						+ " - "
@@ -93,8 +93,8 @@ public class SampleRecommender {
                                 
                                 position++;
 			}
-			System.out.println(sbAux.toString()+"\n");
-			sb.append(sbAux);
+			//System.out.println(sbAux.toString()+"\n");
+			//sb.append(sbAux);
                         sbRecom.append(sbAuxRecom);
 		}
                 rec.setRecommendation(sbRecom.toString());
